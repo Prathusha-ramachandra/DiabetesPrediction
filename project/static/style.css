@@ -1,0 +1,48 @@
+/* COMMON SECTION STYLING */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    color: #ffffff;
+    position: relative;
+}
+
+/* DARK OVERLAY for readability */
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.container > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* HOME */
+#home {
+    background: url("{{ url_for('static', filename='images/diabetes.jpg') }}")
+        center/cover no-repeat;
+    min-height: 80vh;
+}
+
+/* DATA INFO */
+#data {
+    background: url("{{ url_for('static', filename='images/dataInfo.jpeg') }}")
+        center/cover no-repeat;
+}
+
+/* PREDICTION */
+#prediction {
+    background: url("{{ url_for('static', filename='images/prediction.jpeg') }}")
+        center/cover no-repeat;
+}
+
+/* VISUALIZATION */
+#visualization {
+    background: url("{{ url_for('static', filename='images/Visualization.jpeg') }}")
+        center/cover no-repeat;
+}
